@@ -1,0 +1,1076 @@
+[
+    {
+        "Descrição": "Mart. demolidor TE 800-AVR 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-800"
+    },
+    {
+        "Descrição": "Receptor laser PRA 20",
+        "Tipo": "Acessório",
+        "Linha": "Laser",
+        "Modelo": "Receptor PRA 20"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 700-AVR 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-700"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 2000-AVR 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-2000"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 1000-AVR 230V cabo un",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-1000"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 3000-AVR 230V cabo un",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-3000"
+    },
+    {
+        "Descrição": "Sistema de reciclagem de água DD-WMS 100",
+        "Tipo": "Acessório",
+        "Linha": "Perfuratriz",
+        "Modelo": "DD-WMS 100"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 500 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-500"
+    },
+    {
+        "Descrição": "Martelo perf. TE 7-C 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-7 C"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 1000-AVR 230V s/cabo",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-1000"
+    },
+    {
+        "Descrição": "Bateria B 12/2.6",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Bateria B 12/2.6"
+    },
+    {
+        "Descrição": "Carreg. bateria C 4/12-50 230V caixa",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Carregador C/412-50"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 3000-AVR 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-3000"
+    },
+    {
+        "Descrição": "Carreg. bateria C 4/36-350 220V caixa",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Carregador C/4 36"
+    },
+    {
+        "Descrição": "Martelo perf. TE 3-ML 220V mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-3 ML"
+    },
+    {
+        "Descrição": "Rebarb./Esmerilh. AG 180-20P",
+        "Tipo": "Ferramenta",
+        "Linha": "Esmerilhadeira",
+        "Modelo": "AG 180-20P"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 1500-AVR 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-1500"
+    },
+    {
+        "Descrição": "Laser rotativo PR 2-HS A12",
+        "Tipo": "Ferramenta",
+        "Linha": "Laser",
+        "Modelo": "PR 2 HS"
+    },
+    {
+        "Descrição": "Martelo perf. TE 7 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-7"
+    },
+    {
+        "Descrição": "Carreg. bateria C 4/36-90 220V caixa",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Carregador C/4 36"
+    },
+    {
+        "Descrição": "Bateria B 22/5.2 Li-ion",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Bateria B 22"
+    },
+    {
+        "Descrição": "Perfurador diam. DD 160 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Perfuratriz",
+        "Modelo": "DD-160"
+    },
+    {
+        "Descrição": "Coluna para perfuração DD-ST 160 SFL",
+        "Tipo": "Acessório",
+        "Linha": "Perfuratriz",
+        "Modelo": "DD-ST 160"
+    },
+    {
+        "Descrição": "Rebarb./Esmerilh. AG 115-8S",
+        "Tipo": "Ferramenta",
+        "Linha": "Esmerilhadeira",
+        "Modelo": "AG 115-8S"
+    },
+    {
+        "Descrição": "Rebarb./Esmerilh. AG 115-8D",
+        "Tipo": "Ferramenta",
+        "Linha": "Esmerilhadeira",
+        "Modelo": "AG-115-8D"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 1000-AVR 220V s/cabo",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-1000"
+    },
+    {
+        "Descrição": "Bateria B 36/6.0 Li-Ion",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Bateria B/36"
+    },
+    {
+        "Descrição": "Martelo combinado à bateria TE 30-A36 ma",
+        "Tipo": "Ferramenta",
+        "Linha": "Combinado",
+        "Modelo": "TE-30 A-36"
+    },
+    {
+        "Descrição": "Serra circular bateria SCW 22-A mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Serra",
+        "Modelo": "SCW 22-A"
+    },
+    {
+        "Descrição": "Rebarb./Esmerilh. DCG 230-D 230V caixa",
+        "Tipo": "Ferramenta",
+        "Linha": "Esmerilhadeira",
+        "Modelo": "DCG 230 D"
+    },
+    {
+        "Descrição": "Bateria B 36/3.0 Li-Ion",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Bateria B/36"
+    },
+    {
+        "Descrição": "Laser rotativo PR 3",
+        "Tipo": "Ferramenta",
+        "Linha": "Laser",
+        "Modelo": "PR 3"
+    },
+    {
+        "Descrição": "Martelo combinado TE 60-ATC 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Combinado",
+        "Modelo": "TE-60"
+    },
+    {
+        "Descrição": "Martelo perfurador bateria TE 2-A22 mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-2 A22"
+    },
+    {
+        "Descrição": "Martelo combinado TE 60-ATC 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Combinado",
+        "Modelo": "TE-60"
+    },
+    {
+        "Descrição": "....PRA 20",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Receptor PRA 20"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 500-AVR 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-500"
+    },
+    {
+        "Descrição": "Martelo combinado TE 70-AVR 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Combinado",
+        "Modelo": "TE-70"
+    },
+    {
+        "Descrição": "Martelo perf. TE 7-C 220V + DRS",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-7 C"
+    },
+    {
+        "Descrição": "Rebarb./Esmerilh. DAG 125-SE 230V caixa",
+        "Tipo": "Ferramenta",
+        "Linha": "Esmerilhadeira",
+        "Modelo": "DAG 125-SE"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 706 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-706"
+    },
+    {
+        "Descrição": "Martelo perf. TE 2 220V mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-2"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 804 115V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-804"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 1000-AVR 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-1000"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 1000-AVR 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-1000"
+    },
+    {
+        "Descrição": "Martelo perf. TE 7-C 230V + DRS",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-7 C"
+    },
+    {
+        "Descrição": "Perfurador diam. DD 120 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Perfuratriz",
+        "Modelo": "DD-120"
+    },
+    {
+        "Descrição": "Aparaf. gesso cart. SD 5000 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Parafusadeira",
+        "Modelo": "SD-5000"
+    },
+    {
+        "Descrição": "Martelo combinado TE 70 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Combinado",
+        "Modelo": "TE-70"
+    },
+    {
+        "Descrição": "Medidor laser PD 40",
+        "Tipo": "Ferramenta",
+        "Linha": "Laser",
+        "Modelo": "PD 40"
+    },
+    {
+        "Descrição": "Martelo combinado TE 70-D/AVR 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Combinado",
+        "Modelo": "TE-70 D/AVR"
+    },
+    {
+        "Descrição": "Rebarb./Esmerilh. AG 180-20D",
+        "Tipo": "Ferramenta",
+        "Linha": "Esmerilhadeira",
+        "Modelo": "AG 180-20D"
+    },
+    {
+        "Descrição": "Martelo perf. TE 1 220V mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-1"
+    },
+    {
+        "Descrição": "Medidor laser PD-E ET",
+        "Tipo": "Ferramenta",
+        "Linha": "Laser",
+        "Modelo": "Medidor PD-E ET"
+    },
+    {
+        "Descrição": "Martelo combinado TE 70 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Combinado",
+        "Modelo": "TE-70"
+    },
+    {
+        "Descrição": "Laser rotativo PRE 3",
+        "Tipo": "Ferramenta",
+        "Linha": "Laser",
+        "Modelo": "Laser Rotatório PRE 3"
+    },
+    {
+        "Descrição": "Ferr. fixação directa DX 2",
+        "Tipo": "Ferramenta",
+        "Linha": "Fixação Direta",
+        "Modelo": "DX-2"
+    },
+    {
+        "Descrição": "Mart.TE1000-AVR 230Vs/cabo+1kit sem cust",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-1000"
+    },
+    {
+        "Descrição": "Laser linha PM 2-L",
+        "Tipo": "Ferramenta",
+        "Linha": "Laser",
+        "Modelo": "PM 2-L"
+    },
+    {
+        "Descrição": "Mart.TE2000-AVR 230V+1kit sem custo zero",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-2000"
+    },
+    {
+        "Descrição": "Mart.TE500 220V+1kit serv-Sem custo zero",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-500"
+    },
+    {
+        "Descrição": "Rebarbadora a bateria AG 125-A22 mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Esmerilhadeira",
+        "Modelo": "AG 125-A22"
+    },
+    {
+        "Descrição": "Aparaf. perf. compacta a bat. SFC 22-A m",
+        "Tipo": "Ferramenta",
+        "Linha": "Parafusadeira",
+        "Modelo": "SFC 22-A"
+    },
+    {
+        "Descrição": "Martelo perf. TE 1 220V caixa",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-1"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 905-AVR 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-905"
+    },
+    {
+        "Descrição": "Martelo perf. TE 2 230V HLA caixa",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-2"
+    },
+    {
+        "Descrição": "Martelo combinado TE 56-ATC 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Combinado",
+        "Modelo": "TE 56-ATC"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 805 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-805"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 505 230V CH",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-505"
+    },
+    {
+        "Descrição": "Martelo combinado TE 76 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Combinado",
+        "Modelo": "TE-76"
+    },
+    {
+        "Descrição": "Martelo combinado TE 56 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Combinado",
+        "Modelo": "TE-56"
+    },
+    {
+        "Descrição": "Martelo combinado TE 50 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Combinado",
+        "Modelo": "TE-50"
+    },
+    {
+        "Descrição": "Martelo combinado TE 35 230V TE-T",
+        "Tipo": "Ferramenta",
+        "Linha": "Combinado",
+        "Modelo": "TE 35"
+    },
+    {
+        "Descrição": "TE 1",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-1"
+    },
+    {
+        "Descrição": "TE 2-M",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-2 M"
+    },
+    {
+        "Descrição": "Ferr. fixação directa DX 36-M",
+        "Tipo": "Ferramenta",
+        "Linha": "Fixação Direta",
+        "Modelo": "DX 36"
+    },
+    {
+        "Descrição": "Martelo perf. TE 1 230V caixa",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-1"
+    },
+    {
+        "Descrição": "SFH 144-A",
+        "Tipo": "Ferramenta",
+        "Linha": "Parafusadeira",
+        "Modelo": "SFH 144-A"
+    },
+    {
+        "Descrição": "Carreg. bateria C 4/36 Li-Ion 230V",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Carregador C/4 36"
+    },
+    {
+        "Descrição": "Bateria B 144 2.6 Li-Ion",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Bateria B 144 2.6"
+    },
+    {
+        "Descrição": "PRA 20",
+        "Tipo": "Acessório",
+        "Linha": "Laser",
+        "Modelo": "PRA 20"
+    },
+    {
+        "Descrição": "Aspirador universal VC 20-U 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Aspirador",
+        "Modelo": "VC-20-U"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 3000-AVR 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-3000"
+    },
+    {
+        "Descrição": 2068247,
+        "Tipo": "Acessório",
+        "Linha": "Laser",
+        "Modelo": "Receptor PRA 20"
+    },
+    {
+        "Descrição": "....2068247",
+        "Tipo": "Acessório",
+        "Linha": "Laser",
+        "Modelo": "Receptor PRA 20"
+    },
+    {
+        "Descrição": "Aparaf/berbequim bat. SF 6H-A22 mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Parafusadeira",
+        "Modelo": "SF 6H-A22"
+    },
+    {
+        "Descrição": "Martelo combinado TE 50-AVR 220 V",
+        "Tipo": "Ferramenta",
+        "Linha": "Combinado",
+        "Modelo": "TE-50"
+    },
+    {
+        "Descrição": "Martelo perf. TE 16 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-16"
+    },
+    {
+        "Descrição": "Aparaf. constr. met. ST 2500 230V mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Parafusadeira",
+        "Modelo": "ST-2500"
+    },
+    {
+        "Descrição": "Aparaf. gesso cart. SD 5000 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Parafusadeira",
+        "Modelo": "SD-5000"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 500 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-500"
+    },
+    {
+        "Descrição": "Ferr. fixação directa DX 36",
+        "Tipo": "Ferramenta",
+        "Linha": "Fixação Direta",
+        "Modelo": "DX 36"
+    },
+    {
+        "Descrição": "Laser rotativo PR 25 S IF",
+        "Tipo": "Ferramenta",
+        "Linha": "Laser",
+        "Modelo": "PR 25 S IF"
+    },
+    {
+        "Descrição": "Medidor laser PD 42",
+        "Tipo": "Ferramenta",
+        "Linha": "Laser",
+        "Modelo": "PD 42"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 706-AVR 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-706"
+    },
+    {
+        "Descrição": "Serra de sabre a bateria WSR 22-A mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Serra",
+        "Modelo": "WSR 22-A"
+    },
+    {
+        "Descrição": "Serra circular bateria SCM 22-A mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Serra",
+        "Modelo": "SCM 22-A"
+    },
+    {
+        "Descrição": "Ferramenta a gás GX 120",
+        "Tipo": "Ferramenta",
+        "Linha": "Fixação Direta",
+        "Modelo": "GX-120"
+    },
+    {
+        "Descrição": "Martelo perfurador bateria TE 6-A36-AVR",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE 6-A-36"
+    },
+    {
+        "Descrição": "Carreg. bateria C 4/36-350 230V caixa",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Carregador C 4/36-350"
+    },
+    {
+        "Descrição": "Chave impacto a bat. SIW 22T-A mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Chave de Impacto",
+        "Modelo": "SIW 22T-A"
+    },
+    {
+        "Descrição": "Bateria B 22/3.3 Li-Ion",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Bateria B 22/3.3"
+    },
+    {
+        "Descrição": "Perfurador diam. DD 110-D 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Perfuratriz",
+        "Modelo": "DD 110"
+    },
+    {
+        "Descrição": "Martelo combinado TE 50 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Combinado",
+        "Modelo": "TE-50"
+    },
+    {
+        "Descrição": "Coluna para perfuração DD-HD 30",
+        "Tipo": "Acessório",
+        "Linha": "Perfuratriz",
+        "Modelo": "Coluna DD-HD 30"
+    },
+    {
+        "Descrição": "Perfurador diam. DD 200 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Perfuratriz",
+        "Modelo": "DD-200"
+    },
+    {
+        "Descrição": "Bateria PRA 84",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Bateria PRA 84"
+    },
+    {
+        "Descrição": "Ferramenta fixação bateria BX 3-ME A22 m",
+        "Tipo": "Ferramenta",
+        "Linha": "Fixação Direta",
+        "Modelo": "BX 3"
+    },
+    {
+        "Descrição": "Polidora de betão DGH 130 230V DLX",
+        "Tipo": "Ferramenta",
+        "Linha": "Desbastadora de Concreto",
+        "Modelo": "DGH 130"
+    },
+    {
+        "Descrição": "Mart.TE800-AVR 220V+1kit sem custo zero",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-800"
+    },
+    {
+        "Descrição": "TE500 220V+1kit serv-Sem custo zero",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-500"
+    },
+    {
+        "Descrição": "Martelo perf. TE 1 230V mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-1"
+    },
+    {
+        "Descrição": "Receptor laser PRA 31",
+        "Tipo": "Acessório",
+        "Linha": "Laser",
+        "Modelo": "Receptor PRA 31"
+    },
+    {
+        "Descrição": "Laser de pontos PMP 45",
+        "Tipo": "Ferramenta",
+        "Linha": "Laser",
+        "Modelo": "Laser PMP 45"
+    },
+    {
+        "Descrição": "Mart.TE700-AVR 220V+1kit Sem custo zero",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-700"
+    },
+    {
+        "Descrição": "Ferramenta fixação bateria BX 3-L A22 ma",
+        "Tipo": "Ferramenta",
+        "Linha": "Fixação Direta",
+        "Modelo": "BX-3"
+    },
+    {
+        "Descrição": "Laser rotativo PR 30-HVS A12",
+        "Tipo": "Ferramenta",
+        "Linha": "Laser",
+        "Modelo": "Laser Rotatório PR 30"
+    },
+    {
+        "Descrição": "Bateria B 22/2.6 Li-ion",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Bateria B 22/2.6"
+    },
+    {
+        "Descrição": "Trólei TE 3000-T (03)",
+        "Tipo": "Acessório",
+        "Linha": "Rompedor",
+        "Modelo": "Trólei TE 3000-T"
+    },
+    {
+        "Descrição": "Controlo remoto / receptor laser PRA 30",
+        "Tipo": "Acessório",
+        "Linha": "Laser",
+        "Modelo": "Controle Remoto Receptor"
+    },
+    {
+        "Descrição": "Bateria B 22/4.0 Li-ion",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Bateria B 22/4.0"
+    },
+    {
+        "Descrição": "Polidora de betão DGH 130 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Desbastadora de Concreto",
+        "Modelo": "DGH 130"
+    },
+    {
+        "Descrição": "Rebarb./Esmerilh. AG 230-24D 230V caixa",
+        "Tipo": "Ferramenta",
+        "Linha": "Esmerilhadeira",
+        "Modelo": "AG 230-24D"
+    },
+    {
+        "Descrição": "Aspirador universal VC 40L-X 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Aspirador",
+        "Modelo": "VC-40L-X"
+    },
+    {
+        "Descrição": "Rebarb./Esmerilh. DCG 180-P 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Esmerilhadeira",
+        "Modelo": "DCG 180-P"
+    },
+    {
+        "Descrição": "Martelo perf. TE 2-M 220V mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-2 M"
+    },
+    {
+        "Descrição": "Berbequim/Furadeira UH 700 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Furadeira",
+        "Modelo": "UH-700"
+    },
+    {
+        "Descrição": "Martelo perfurador bateria TE 4-A22 mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE 4-A22"
+    },
+    {
+        "Descrição": "Chave impacto a bat. SIW 22-A 1/2\" mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Chave de Impacto",
+        "Modelo": "SIW 22-A"
+    },
+    {
+        "Descrição": "Laser multilinhas PM 4-M ET",
+        "Tipo": "Ferramenta",
+        "Linha": "Laser",
+        "Modelo": "PM 4-M"
+    },
+    {
+        "Descrição": "Aparaf/berbequim bat. SFH 22-A mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Parafusadeira",
+        "Modelo": "SFH 22-A"
+    },
+    {
+        "Descrição": "Bateria B 14/3.3 Li-Ion",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Bateria B 14/3.3"
+    },
+    {
+        "Descrição": "Laser multilinhas PM 4-M",
+        "Tipo": "Ferramenta",
+        "Linha": "Laser",
+        "Modelo": "PM 4-M"
+    },
+    {
+        "Descrição": "Martelo perfurador bateria TE 4-A22 caix",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE 4-A22"
+    },
+    {
+        "Descrição": "Laser rotativo PR 2-HS",
+        "Tipo": "Ferramenta",
+        "Linha": "Laser",
+        "Modelo": "PR 2-HS"
+    },
+    {
+        "Descrição": "Berbequim/Furadeira UH 700 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Furadeira",
+        "Modelo": "UH-700"
+    },
+    {
+        "Descrição": "Roçadora/Cort. parede DC SE20 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Cortadora",
+        "Modelo": "DC SE20"
+    },
+    {
+        "Descrição": "Serra circular bateria SCM 22-A caixa",
+        "Tipo": "Ferramenta",
+        "Linha": "Serra",
+        "Modelo": "SCM 22-A"
+    },
+    {
+        "Descrição": "Perfurador diam. DD 200 220V BL",
+        "Tipo": "Ferramenta",
+        "Linha": "Perfuratriz",
+        "Modelo": "DD-200"
+    },
+    {
+        "Descrição": "Chave impacto a bat. SIW 6AT-A22 mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Chave de Impacto",
+        "Modelo": "SIW 6AT-A22"
+    },
+    {
+        "Descrição": "Battery diagnostic device BD 14/36",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Battery diagnostic device BD 14/36"
+    },
+    {
+        "Descrição": "Perfurador diam. DD 200 230V BS",
+        "Tipo": "Ferramenta",
+        "Linha": "Perfuratriz",
+        "Modelo": "DD-200"
+    },
+    {
+        "Descrição": "Martelo combinado TE 60-ATC/AVR 220 V",
+        "Tipo": "Ferramenta",
+        "Linha": "Combinado",
+        "Modelo": "TE-60"
+    },
+    {
+        "Descrição": "Martelo combinado à bateria TE 60-A36",
+        "Tipo": "Ferramenta",
+        "Linha": "Combinado",
+        "Modelo": "TE 60-A36"
+    },
+    {
+        "Descrição": "Martelo demolidor a bateria TE 500-A36",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE 500-A36"
+    },
+    {
+        "Descrição": "Bateria B 36/9.0 Li-ion",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Bateria B 36/9.0"
+    },
+    {
+        "Descrição": "Martelo perfurador bateria TE 2-A22 caix",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE-2 A22"
+    },
+    {
+        "Descrição": "Bateria B 12-30 Li-ion",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Bateria B 12-30 Li-ion"
+    },
+    {
+        "Descrição": "PD-E",
+        "Tipo": "Ferramenta",
+        "Linha": "Laser",
+        "Modelo": "PD-E"
+    },
+    {
+        "Descrição": "C 4/36-350",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Carregador C/4 36"
+    },
+    {
+        "Descrição": "PR 3",
+        "Tipo": "Ferramenta",
+        "Linha": "Laser",
+        "Modelo": "PR 3"
+    },
+    {
+        "Descrição": "B 22/3.3",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Bateria B 22/3.3"
+    },
+    {
+        "Descrição": "DC 180-S",
+        "Tipo": "Ferramenta",
+        "Linha": "Esmerilhadeira",
+        "Modelo": "DC 180-S"
+    },
+    {
+        "Descrição": "TE 706",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-706"
+    },
+    {
+        "Descrição": "SCM 22-A",
+        "Tipo": "Ferramenta",
+        "Linha": "Serra",
+        "Modelo": "SCM 22-A"
+    },
+    {
+        "Descrição": "DC SE20",
+        "Tipo": "Ferramenta",
+        "Linha": "Cortadora",
+        "Modelo": "DC SE20"
+    },
+    {
+        "Descrição": "Cortadora DCH 300-X 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Cortadora de Parede",
+        "Modelo": "DCH 300-X"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 905 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-905"
+    },
+    {
+        "Descrição": "....PRA 84",
+        "Tipo": "Acessório",
+        "Linha": "Laser",
+        "Modelo": "PRA 84"
+    },
+    {
+        "Descrição": "Cortadora DCH 300 220V",
+        "Tipo": "Ferramenta",
+        "Linha": "Cortadora de Parede",
+        "Modelo": "DCH 300"
+    },
+    {
+        "Descrição": "DCG 180-P",
+        "Tipo": "Ferramenta",
+        "Linha": "Esmerilhadeira",
+        "Modelo": "DCG 180-P"
+    },
+    {
+        "Descrição": "Ferramenta fixação bateria BX 3-L-22 mal",
+        "Tipo": "Ferramenta",
+        "Linha": "Fixação Direta",
+        "Modelo": "BX-3"
+    },
+    {
+        "Descrição": "Bateria B 12-30 Li-ion",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Bateria B 12-30 Li-ion"
+    },
+    {
+        "Descrição": "Carreg. bateria C 6-22 220V caixa",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Carregador C 6-22"
+    },
+    {
+        "Descrição": "Bateria B 22-110 Li-ion",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Bateria B22-110"
+    },
+    {
+        "Descrição": "Carreg. bateria C 6-22 220V caixa",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Carregador C 6-22"
+    },
+    {
+        "Descrição": "Módulo de dados IC CDM-22",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Módulo de Dados"
+    },
+    {
+        "Descrição": "....PRA 31",
+        "Tipo": "Acessório",
+        "Linha": "Laser",
+        "Modelo": "Receptor PRA 31"
+    },
+    {
+        "Descrição": "Aparaf/berbequim bat. SF 6H-22 mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Parafusadeira",
+        "Modelo": "SF 6H-A22"
+    },
+    {
+        "Descrição": "Bateria B 22-85 Li-ion",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "B 22-85 Li-ion"
+    },
+    {
+        "Descrição": "Bateria B 36/5.2",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "B 36/5.2"
+    },
+    {
+        "Descrição": "Carreg. bateria C 8-22 220V caixa",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "Carregador C 8-22"
+    },
+    {
+        "Descrição": "Laser rotativo PR 4-22",
+        "Tipo": "Ferramenta",
+        "Linha": "Laser",
+        "Modelo": "PR 4-22"
+    },
+    {
+        "Descrição": "....Receptor laser PRA 4",
+        "Tipo": "Acessório sem custo",
+        "Linha": "Laser",
+        "Modelo": "Receptor PRA 4"
+    },
+    {
+        "Descrição": "Martelo perf. TE 6-CL 220V mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Martelete",
+        "Modelo": "TE 6-CL"
+    },
+    {
+        "Descrição": "Rebarbadora a bateria AG 6D-22-125 mala",
+        "Tipo": "Ferramenta",
+        "Linha": "Esmerilhadeira",
+        "Modelo": "AG 6D"
+    },
+    {
+        "Descrição": "Bateria B 22-170 Li-ion",
+        "Tipo": "Acessório",
+        "Linha": "Bateria",
+        "Modelo": "B 22-170"
+    },
+    {
+        "Descrição": "Int. conc. vibrator NCV 4-22 cordl.",
+        "Tipo": "Ferramenta",
+        "Linha": "Viabrador de Concreto",
+        "Modelo": "NCV 4"
+    },
+    {
+        "Descrição": "Mart. demolidor TE 600-AVR 230V",
+        "Tipo": "Ferramenta",
+        "Linha": "Rompedor",
+        "Modelo": "TE-600"
+    }
+]
