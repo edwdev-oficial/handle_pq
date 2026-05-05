@@ -5,13 +5,17 @@ import streamlit as st
 from io import BytesIO
 
 from handle_pq.assets.colunas import colunas
-from handle_pq.utils import (formatters, gerar_excel, handle_json)
+from handle_pq.utils import (formatters, gerar_excel, handle_json, ordenar)
 from handle_pq.services import (
     write_xls,
     get_pq_normalizado
 )
 from handle_pq.components import (
     widgets
+)
+from handle_pq.database.database import (
+    get_gollection_tlm,
+    get_collection_normal_itens
 )
 
 
@@ -43,6 +47,9 @@ def show():
     st.title('Handle Pq')
     st.write('App para formatar as planilhas de parque de máquinas')
     st.divider()
+
+    if 'df_editado' not in st.session_state:
+        st.session_state.df_editado = pd.DataFrame()
 
     files = st.file_uploader('Selecione os arquivos', type='xlsx', accept_multiple_files=True)
 
@@ -97,54 +104,47 @@ def show():
             
             st.warning('Normalize os itens abaixo')
 
+            col_tlm = get_gollection_tlm()
+            tlm = col_tlm.find().to_list()[0]
+
+            tlm['tipos'] = sorted(tlm['tipos'], key=ordenar.chave_ordenacao)
+            tlm['linhas'] = sorted(tlm['linhas'], key=ordenar.chave_ordenacao)
+            tlm['modelos'] = sorted(tlm['modelos'], key=ordenar.chave_ordenacao)            
+
             not_normalizer_uniq = list(df_not_normalizer['Descrição'].unique())
 
-            df_normalizar = pd.DataFrame({
-                'Descrição': not_normalizer_uniq,
+            if 'df_normalizar' not in st.session_state:
+                st.session_state.df_normalizar = pd.DataFrame({
+                    'Descrição': not_normalizer_uniq,
+                    
+                })
+                st.session_state.df_normalizar[['Tipo', 'Linha', 'Modelo']] = ''
                 
-            })
-            df_normalizar[['Tipo', 'linha', 'modelo']] = ''
-            df_normal_itens =handle_json.read_json('normal_itens')
 
-            tlm = handle_json.read_json('tml', 'dict')
-
-            def chave_ordenacao(valor):
-                texto = str(valor)
-
-                prefixo = re.search(r'^[A-Za-z]+', texto)
-                numero = re.search(r'(\d+)', texto)
-
-                prefixo = prefixo.group(0) if prefixo else texto
-                numero = int(numero.group(1)) if numero else -1
-
-                return (prefixo, numero, texto)
-
-            tlm['tipos'] = sorted(tlm['tipos'], key=chave_ordenacao)
-            tlm['linhas'] = sorted(tlm['linhas'], key=chave_ordenacao)
-            tlm['modelos'] = sorted(tlm['modelos'], key=chave_ordenacao)
-
-            df_editado = st.data_editor(
-                df_normalizar,
+            editado = st.data_editor(
+                st.session_state.df_normalizar,
                 column_config={
                     'Tipo': widgets.column_config('Tipo', tlm['tipos']),
-                    'linha': widgets.column_config('Linha', tlm['linhas']),
-                    'modelo': widgets.column_config('Modelo', tlm['modelos'])
+                    'Linha': widgets.column_config('Linha', tlm['linhas']),
+                    'Modelo': widgets.column_config('Modelo', tlm['modelos'])
                 },
                 hide_index=True,
-                use_container_width=True
+                use_container_width=True                
             )
 
-            df_editado.rename(columns={'linha': 'Linha', 'modelo': 'Modelo'}, inplace=True)
+            st.session_state.df_normalizar = editado
+
+            st.session_state.df_normalizar.rename(columns={'linha': 'Linha', 'modelo': 'Modelo' }, inplace=True)
 
             if st.button('Salvar'):
-                pass
-                df_normal_itens = pd.concat([
-                    df_normal_itens,
-                    df_editado                    
-                ]).reset_index(drop=True)
-                result = handle_json.write_json(df_normal_itens, 'normal_itens')
-                if result == 'success':
+                datas_normal_itens = st.session_state.df_normalizar.copy().to_dict(orient='records')
+                st.write(datas_normal_itens)
+                col_normal_itens = get_collection_normal_itens()
+                resultado = col_normal_itens.insert_many(datas_normal_itens)
+                if resultado.acknowledged:
                     st.rerun()
+                else:
+                    st.error('Os dados não foram salvos')
 
         else:
 
@@ -172,7 +172,5 @@ def show():
                 data=arquivo_excel,
                 file_name="relatorio.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            )         
-        
-
-        # gerar_excel.dowload(df=df_pq, name='pq_maquinas')
+            )
+            
