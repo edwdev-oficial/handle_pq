@@ -167,10 +167,19 @@ def show():
             st.write(f'Total Mensalidades G.F. c/Imp: {formatters.br_num(total_custo_gf, 2, True)}')
             st.write(f'Custo total de reparações: {formatters.br_num(total_custo_repair, 2, True)}')
 
+            date = pd.to_datetime('now')
+            year = str(date.year).zfill(4)
+            month = str(date.month).zfill(2)
+            day = str(date.day).zfill(2)
+            hour = str(date.hour).zfill(2)
+            min = str(date.minute).zfill(2)
+            sec = str(date.second).zfill(2)
+            file_name = f'pqMaquinas_{year}_{month}_{day}_{hour}_{min}_{sec}'
+
             st.download_button(
                 label="Baixar Excel",
                 data=arquivo_excel,
-                file_name="relatorio.xlsx",
+                file_name=f'{file_name}.xlsx',
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             )
             
