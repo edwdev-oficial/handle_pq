@@ -6,5 +6,5 @@ from io import BytesIO
 def carregar_excel(file_bytes, sheet_name=0):
     return pd.read_excel(BytesIO(file_bytes),sheet_name=sheet_name)
 
-def read(file:BytesIO):
-    return carregar_excel(file.getvalue())
+def read(file:BytesIO, sheet_name=0):
+    return carregar_excel(file.getvalue(), sheet_name=sheet_name)

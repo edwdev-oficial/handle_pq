@@ -23,11 +23,13 @@ from handle_pq.database.database import (
 def carregar_excel(file_bytes, sheet_name=0):
     return pd.read_excel(BytesIO(file_bytes), sheet_name=sheet_name)
 
+
 def convert_col_df_to_number(df, colunas = []):
     for coluna in colunas:
         df[coluna] = df[coluna].fillna(0)
         df[coluna] = df[coluna].replace('-', 0)
         df[coluna] = df[coluna].astype(float)
+
 
 def convert_col_df_to_date(df, colunas = []):
     for coluna in colunas:
@@ -43,10 +45,6 @@ def show():
 
     if 'df_pq' not in st.session_state:
         st.session_state.df_pq = pd.DataFrame()
-
-    st.title('Handle Pq')
-    st.write('App para formatar as planilhas de parque de máquinas')
-    st.divider()
 
     if 'df_editado' not in st.session_state:
         st.session_state.df_editado = pd.DataFrame()
@@ -99,7 +97,11 @@ def show():
 
         df_pq = get_pq_normalizado.get(df_pq)
 
-        df_not_normalizer = df_pq[df_pq[['Tipo', 'Linha', 'Modelo']].isna().any(axis=1)]
+        df_not_normalizer = df_pq[
+            df_pq[['Tipo', 'Linha', 'Modelo']].isna().any(axis=1) |
+            df_pq[['Tipo', 'Linha', 'Modelo']].eq('').any(axis=1)
+        ]
+        
         if not df_not_normalizer.empty:
             
             st.warning('Normalize os itens abaixo')
@@ -137,14 +139,22 @@ def show():
             st.session_state.df_normalizar.rename(columns={'linha': 'Linha', 'modelo': 'Modelo' }, inplace=True)
 
             if st.button('Salvar'):
-                datas_normal_itens = st.session_state.df_normalizar.copy().to_dict(orient='records')
-                st.write(datas_normal_itens)
-                col_normal_itens = get_collection_normal_itens()
-                resultado = col_normal_itens.insert_many(datas_normal_itens)
-                if resultado.acknowledged:
-                    st.rerun()
+                datas_normal_itens = st.session_state.df_normalizar.copy()
+                datas_normal_itens = datas_normal_itens[
+                    datas_normal_itens[['Tipo', 'Linha', 'Modelo']].notna().all(axis=1)
+                    &
+                    datas_normal_itens[['Tipo', 'Linha', 'Modelo']].ne('').all(axis=1)
+                ]
+                if not datas_normal_itens.empty:
+                    datas_normal_itens = datas_normal_itens.copy().to_dict(orient='records')
+                    col_normal_itens = get_collection_normal_itens()
+                    resultado = col_normal_itens.insert_many(datas_normal_itens)
+                    if resultado.acknowledged:
+                        st.rerun()
+                    else:
+                        st.error('Os dados não foram salvos')
                 else:
-                    st.error('Os dados não foram salvos')
+                    st.warning('Não existem itens completos para ser salvo')
 
         else:
 
@@ -158,14 +168,26 @@ def show():
                 df_pq['Duração do contrato'],
                 errors='coerce'
             ).fillna(0).astype(int)
+            st.session_state.df_pq_normalizado = df_pq
+            st.write('')
             st.dataframe(
                 df_pq,
                 column_config=columns_config
             )
             total_custo_gf = df_pq['Mensalidade c/Imp'].sum()
             total_custo_repair = df_pq['Custo de Reparo'].sum()
-            st.write(f'Total Mensalidades G.F. c/Imp: {formatters.br_num(total_custo_gf, 2, True)}')
-            st.write(f'Custo total de reparações: {formatters.br_num(total_custo_repair, 2, True)}')
+            qtd = f"{len(df_pq):,.0f}".replace(",", ".")
+            st.markdown(
+                f"""
+                    <div style='text-align: right; font-style: italic;'>
+                        {qtd} registros carregados
+                    </div>
+                """,
+                unsafe_allow_html=True
+            )
+            # st.write(f'Qtd registros: {len(df_pq)}')
+            # st.write(f'Total Mensalidades G.F. c/Imp: {formatters.br_num(total_custo_gf, 2, True)}')
+            # st.write(f'Custo total de reparações: {formatters.br_num(total_custo_repair, 2, True)}')
 
             date = pd.to_datetime('now')
             year = str(date.year).zfill(4)
@@ -182,4 +204,6 @@ def show():
                 file_name=f'{file_name}.xlsx',
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             )
+
+
             

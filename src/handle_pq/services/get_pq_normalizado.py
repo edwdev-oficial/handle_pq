@@ -15,3 +15,9 @@ def get(df):
         on=['Descrição'],
         how='left'
     )
+
+    # duplicados = df_normal_itens[
+    #     df_normal_itens.duplicated(subset=['Descrição'], keep=False)
+    # ].sort_values('Descrição')
+
+    # return duplicados    
