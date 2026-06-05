@@ -1,356 +1,3 @@
-# ========================================================
-# region FORMA ANTIGA
-# ========================================================
-# import pandas as pd
-
-# import streamlit as st
-# import plotly.express as px
-
-# from handle_pq.components import (
-#     create_filter,
-#     card
-# )
-# from handle_pq.utils import (
-#     formatters
-# )
-# from handle_pq.services import (
-#     export_dashboard_pdf,
-#     get_data_ids
-# )
-
-# COLORS = {
-#     'red': '#d2051e',
-#     'beige': '#d7cebd',
-#     'dark': '#524f53',
-#     'taupe': '#887f6e',
-#     'wine': '#671c3e',
-#     'green': '#008000',
-#     'card': '#F0F2F6'
-# }
-
-# CHART_PALETTE = [
-#     COLORS['red'],
-#     COLORS['dark'],
-#     COLORS['taupe'],
-#     COLORS['wine'],
-#     COLORS['beige'],
-#     COLORS['green'],
-#     COLORS['card']
-# ]
-
-# def show():
-
-#     if 'subtitle' not in st.session_state:
-#         st.session_state.subtitle = ''
-
-#     st.title('Analise do Parque de Máquinas')
-#     if st.session_state.subtitle:
-#         st.subheader(st.session_state.subtitle)
-#     st.divider()
-
-#     if 'df_pq_normalizado' not in st.session_state:
-#         st.warning('Carregue os arquivos do parque de máquinas do HOL...')
-
-#     df_pq = st.session_state.df_pq_normalizado.copy()
-#     df_pq.drop(columns=[
-#         "Tipo de Contrato",
-#         "Ferramenta de empréstimo permitida",
-#         "Cobertura de roubo",
-#         "Número do Equipamento"
-#     ], inplace=True)
-#     df_pq = df_pq.fillna('').replace({
-#         'None': '',
-#         'nan': '',
-#         'NaN': ''
-#     })
-
-#     mostrar_baixadas = st.sidebar.toggle('Mostrar baixadas por B.O.')
-
-#     # st.dataframe(df_pq)
-#     # st.write(f'Qtd registros: {len(df_pq)}')
-
-#     df_data_ids = get_data_ids.get()
-#     # st.dataframe(df_data_ids)
-
-#     df_pq = pd.merge(
-#         df_pq,
-#         df_data_ids,
-#         on='Id',
-#         how='left'
-#     )
-
-#     col = df_pq.pop('cliente')
-#     df_pq.insert(0, 'cliente', col)
-#     col = df_pq.pop('UF')
-#     df_pq.insert(0, 'UF', col)
-
-
-#     if not mostrar_baixadas:
-#         df_pq = df_pq[df_pq['Status da Ferramenta'] != 'Roubado']
-     
-
-#     cliente = create_filter.create_filter(df_pq, 'cliente', 'Cliente', True)
-#     if cliente:
-#         df_pq = df_pq[df_pq['cliente'] == cliente]
-
-#     uf = create_filter.create_filter(df_pq, 'UF', 'UF')
-#     if uf:
-#         df_pq = df_pq[df_pq['UF'] == uf]
-
-#     grupo = create_filter.create_filter(
-#         df=df_pq,
-#         coluna='Grupo',
-#         tilte='Grupo',
-#         sidebar=True,
-#         type='selectbox'
-#     )
-#     if grupo:
-#         df_pq = df_pq[df_pq['Grupo'] == grupo].reset_index(drop=True)
-
-#     status = create_filter.create_filter(df_pq, 'Status da Ferramenta', 'Status', True, 'multiselect')
-#     if status:
-#         df_pq = df_pq[df_pq['Status da Ferramenta'].isin(status)]
-
-#     tipo = create_filter.create_filter(df_pq, 'Tipo', 'Tipo', True)
-#     if tipo:
-#         df_pq = df_pq[df_pq['Tipo'] == tipo]
-
-#     linha = create_filter.create_filter(df_pq, 'Linha', 'Linha', True)
-#     if linha:
-#         df_pq = df_pq[df_pq['Linha'] == linha]
-
-#     modelo = create_filter.create_filter(df_pq, 'Modelo', 'Modelo', True)
-#     if modelo:
-#         df_pq = df_pq[df_pq['Modelo'] == modelo]
-
-
-#     df_pq['Data de compra'] = pd.to_datetime(
-#         df_pq['Data de compra'],
-#         errors='coerce'
-#     )
-
-
-#     df_pq['idade_int (a)'] = (
-#         ((pd.Timestamp.now() - df_pq['Data de compra']).dt.days // 30) // 12
-#     )
-
-#     df_pq = df_pq.reset_index(drop=True)
-#     # st.dataframe(df_pq)
-#     # st.write(f'Qtd registros: {len(df_pq)}')
-
-#     col1, col2, col3 , col4 = st.columns(4)
-    
-#     with col1:
-#         # st.write(f'Qtd: {len(df_pq)}')
-#         st.markdown(card.make_kpi_card('Qtd', len(df_pq), 'Qtd total'), unsafe_allow_html=True)
-
-#     with col2:
-#         st.markdown(card.make_kpi_card('Mensal G.F.', formatters.br_num(df_pq['Mensalidade c/Imp'].sum(), 2, True), 'Com impostos' ), unsafe_allow_html=True)
-
-#     with col3:
-#         st.markdown(card.make_kpi_card('Qtd. Reparações', df_pq['Quantidade de reparos'].sum(), 'Total'), unsafe_allow_html=True)
-
-#     with col4:
-#         st.markdown(card.make_kpi_card('Custo das Reparações Pagas', formatters.br_num(df_pq['Custo de Reparo'].sum() * 1.4, 2, True), 'Ferramentas Próprias'), unsafe_allow_html=True)
-
-#     col_g1, col_g2 = st.columns(2)
-
-#     # if not grupo:
-#     with col_g1:
-#         qtd_comprados = df_pq['Grupo'].str.lower().eq('comprado').sum()
-#         qtd_frota = df_pq['Grupo'].str.lower().eq('frota').sum()
-
-#         df_grupo = {
-#             'Grupo': ['Compradas', 'Frota'],
-#             'Quantidade': [qtd_comprados, qtd_frota]
-#         }
-
-#         fig = px.pie(
-#             df_grupo,
-#             values='Quantidade',
-#             names='Grupo',
-#             color='Grupo',
-#             color_discrete_map={
-#                 'Compradas': COLORS['red'],
-#                 'Frota': COLORS['dark']
-#             },
-#             hole=0.25
-#         )
-#         fig.update_traces(textposition='inside', textinfo='percent+label+value')
-#         fig.update_layout(
-#             title='Maquinas por grupo',
-#             showlegend=True,
-#             margin=dict(t=50, b=10, l=10, r=10)
-#         )
-
-#         with st.container(border=True):
-#             st.plotly_chart(fig, use_container_width=True)
-
-#     with col_g2:
-#         df_grupo_barras = df_pq.copy()
-#         df_grupo_barras['Grupo Grafico'] = df_grupo_barras['Grupo'].str.lower().map({
-#             'comprado': 'Compradas',
-#             'frota': 'Frota'
-#         })
-#         df_grupo_barras = (
-#             df_grupo_barras[df_grupo_barras['Grupo Grafico'].notna()]
-#             .groupby('Grupo Grafico')
-#             .agg(
-#                 Ferramentas=('Grupo', 'size'),
-#                 Reparacoes=('Quantidade de reparos', 'sum')
-#             )
-#             .reset_index()
-#             .melt(
-#                 id_vars='Grupo Grafico',
-#                 value_vars=['Ferramentas', 'Reparacoes'],
-#                 var_name='Indicador',
-#                 value_name='Quantidade'
-#             )
-#         )
-
-#         fig_barras = px.bar(
-#             df_grupo_barras,
-#             x='Grupo Grafico',
-#             y='Quantidade',
-#             color='Indicador',
-#             barmode='group',
-#             color_discrete_map={
-#                 'Ferramentas': COLORS['red'],
-#                 'Reparacoes': COLORS['dark']
-#             },
-#             text='Quantidade'
-#         )
-#         fig_barras.update_traces(textposition='outside')
-#         fig_barras.update_layout(
-#             title='Ferramentas e reparacoes por grupo',
-#             xaxis_title='Grupo',
-#             yaxis_title='Quantidade',
-#             legend_title='',
-#             margin=dict(t=50, b=10, l=10, r=10)
-#         )
-#         fig_barras.update_yaxes(
-#             showticklabels=False,
-#             # showgrid=False,
-#             showline=False,
-#             zeroline=True
-#             # value=None
-#         )            
-#         with st.container(border=True):
-#             st.plotly_chart(fig_barras, use_container_width=True)
-
-#     if not modelo:
-#         with col_g1:
-#             df_modelos = df_pq[['Modelo']]
-#             df_modelos['unidade'] = 1
-
-#             df_modelos = (
-#                 df_modelos
-#                 .groupby(['Modelo'])
-#                 .agg({
-#                     'unidade': 'sum'
-#                 })
-#                 .reset_index()
-#             )
-
-#             fig = px.pie(
-#                 df_modelos,
-#                 values='unidade',
-#                 names='Modelo',
-#                 color='Modelo',
-#                 color_discrete_sequence=CHART_PALETTE,
-#                 hole=0.25
-#             )
-#             fig.update_traces(textposition='inside', textinfo='percent+label+value')
-#             fig.update_layout(
-#                 title='Máquinas por Modelo',
-#                 showlegend=True,
-#                 margin=dict(t=50, b=10, l=10, r=10)
-#             )        
-#             with st.container(border=True):
-#                 st.plotly_chart(fig)
-
-
-#     col1, col2 = st.columns(2)
-
-#     with col1:
-#         df_modelos = df_pq[['Modelo']]
-#         df_modelos['unidade'] = 1
-#         df_modelos = (
-#             df_modelos
-#             .groupby(['Modelo'])
-#             .agg({
-#                 'unidade': 'sum'
-#             })
-#             .reset_index()
-#         )
-
-#         # st.dataframe(df_modelos)
-
-#         fig_qtd_modelo = px.bar(
-#             df_modelos,
-#             x='Modelo',
-#             y='unidade'
-#         )
-
-#         with st.container(border=True):
-#             st.plotly_chart(fig_qtd_modelo)
-
-#     with col2:
-#         df_idade = (
-#             df_pq.groupby('idade_int (a)')
-#             .size()
-#             .reset_index(name='Quantidade')
-#         )
-
-#         # st.dataframe(df_idade)
-
-#         fig_idade = px.bar(
-#             df_idade,
-#             x='idade_int (a)',
-#             y='Quantidade',
-#             text='Quantidade',
-#             color_discrete_sequence=[COLORS['red']]
-#         )
-#         fig_idade.update_layout(
-#             title='Quantidade de máquinas por idade',
-#             xaxis_title='Idade (anos)',
-#             yaxis_title='Quantidade',
-#             margin=dict(t=50, b=10, l=10, r=10),
-#             xaxis_type='category',
-#             xaxis=dict(
-#                 tickmode='linear',
-#                 dtick=1
-#             ),
-#         )
-
-#         fig_idade.update_traces(
-#             textposition='outside',
-#             # xaxis_title='Idade (anos)',
-#             # yaxis_title='Quantidade',
-#             # title='Quantidade de máquinas por idade',
-
-#         )
-#         fig_idade.update_yaxes(
-#             showticklabels=False,
-#             # showgrid=False,
-#             showline=False,
-#             zeroline=True
-#             # value=None
-#         )
-
-#         with st.container(border=True):
-#             st.plotly_chart(fig_idade, use_container_width=True)    
-
-#     pdf = export_dashboard_pdf.gerar_dashboard_pdf(df_pq)
-#     st.sidebar.download_button(
-#         'Exportar PDF',
-#         data=pdf,
-#         file_name='dahsboard_pq.pdf',
-#         mime='application/pdf'
-#     )
-# endregion
-# ========================================================
-
 import numpy as np
 import pandas as pd
 import streamlit as st
@@ -574,9 +221,11 @@ def prepare_df():
         errors="coerce",
     )
 
-    df_pq["idade_int (a)"] = (
-        ((pd.Timestamp.now() - df_pq["Data de compra"]).dt.days // 30) // 12
-    )
+    # df_pq["idade_int (a)"] = (
+    #     ((pd.Timestamp.now() - df_pq["Data de compra"]).dt.days // 30) // 12
+    # )
+
+    df_pq["idade_int (a)"] = df_pq["Data de compra"].apply(idade_anos_completos)
 
     df_pq["idade_int (a)"] = df_pq["idade_int (a)"].fillna(0).astype(int)
 
@@ -1079,6 +728,20 @@ def make_repair_cost_by_model(df_pq, top_n=10):
 
     return fig
 
+def idade_anos_completos(data_compra):
+    hoje = pd.Timestamp.today().normalize()
+
+    idade = hoje.year - data_compra.year
+
+    ainda_nao_fez_aniversario = (
+        (hoje.month < data_compra.month)
+        or (hoje.month == data_compra.month and hoje.day < data_compra.day)
+    )
+
+    if ainda_nao_fez_aniversario:
+        idade -= 1
+
+    return idade
 
 def show():
 
@@ -1252,7 +915,6 @@ def show():
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )        
 
-    # pdf = export_dashboard_pdf.gerar_dashboard_pdf(df_pq)
     pdf = export_dashboard_pdf_profissional.gerar_dashboard_pdf(df_pq)
 
     st.sidebar.divider()
@@ -1264,4 +926,3 @@ def show():
         mime="application/pdf",
         use_container_width=True,
     )
-    
