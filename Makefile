@@ -1,2 +1,3 @@
 run:
-	poetry run streamlit run app.py
+	@echo Rodando comando do Streamlit...
+	python -m streamlit run app.py
