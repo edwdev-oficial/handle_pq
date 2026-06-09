@@ -154,16 +154,15 @@ def app():
         layout='wide',
     )
 
-    # st.set_option("client.toolbarMode", "minimal")
-    hide_streamlit_style = """
-    <style>
-    #MainMenu {visibility: hidden;}
-    header {visibility: hidden;}
-    footer {visibility: hidden;}
-    </style>
+    # hide_streamlit_style = """
+    # <style>
+    # #MainMenu {visibility: hidden;}
+    # header {visibility: hidden;}
+    # footer {visibility: hidden;}
+    # </style>
 
-    """
-    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+    # """
+    # st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
     pages = {
         'Carregar dados': {

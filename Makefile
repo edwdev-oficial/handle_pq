@@ -1,3 +1,2 @@
 run:
-	@echo Rodando comando do Streamlit...
-	python -m streamlit run app.py
+	poetry run streamlit run app.py --server.port 8502 --server.headless true

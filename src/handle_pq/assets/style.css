@@ -18,6 +18,10 @@
     background-color: var(--COLOR_BG2);
 }
 
+.stAppToolbar {
+    background-color: var(--COLOR_BG2);
+}
+
 .block-container {
     padding-top: 4rem;
     padding-bottom: 1.5rem;
