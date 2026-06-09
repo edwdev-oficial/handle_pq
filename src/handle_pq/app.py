@@ -154,6 +154,8 @@ def app():
         layout='wide',
     )
 
+    st.set_option("client.toolbarMode", "minimal")
+
     pages = {
         'Carregar dados': {
             'icon': 'box-arrow-in-down',
