@@ -4,8 +4,9 @@ import streamlit as st
 from handle_pq.components import (
     create_filter
 )
-from handle_pq.utils.gerar_excel import (
-    dowload)
+from handle_pq.utils import (
+    gerar_excel, formatters
+)
 
 def show():
 
@@ -14,9 +15,6 @@ def show():
         &
         (st.session_state.df_pq_normalizado['Status da Ferramenta'] != 'Roubado') 
     ]
-
-
-    st.write(f'Qtd: {len(df_renovacoes)}')
 
     cliente = create_filter.create_filter(df_renovacoes, 'Razao Social', 'Cliente', True, 'multiselect')
     if cliente:
@@ -31,8 +29,25 @@ def show():
     if status:
         df_renovacoes = df_renovacoes[df_renovacoes['Status da Ferramenta'].isin(status)]    
 
+    total_pago_gf = df_renovacoes['Mensalidade c/Imp'].sum()
+
+    st.write('Parque de Máquinas Filtrado')
     st.dataframe(df_renovacoes)
-    
+    text_qtd_valor = f'{len(df_renovacoes)} máquinas, mensalidade total Gestão de Frotas: {formatters.br_num(
+        total_pago_gf,
+        2,
+        True
+    )}'
+    st.markdown(
+        f"""
+            <div class="rodape-df">
+                {text_qtd_valor}
+            </div>
+        """,
+        unsafe_allow_html=True
+    )
+    st.subheader('', divider='red')
+
     df_renovacoes_group = (
         df_renovacoes
         .groupby(['Data de Término do Contrato', 'Tipo', 'Linha', 'Modelo'])
@@ -40,8 +55,9 @@ def show():
         .reset_index(name='Quantidade')
     )
 
+    st.write('Agrupado por vencimento e modelo')
     st.dataframe(df_renovacoes_group)
-    st.write(f'Qtd: {df_renovacoes_group["Quantidade"].sum()}')
+    st.subheader('', divider='red')
 
     df_lista = (
         df_renovacoes
@@ -50,6 +66,7 @@ def show():
         .reset_index(name='Séries')
     )
 
+    st.write('Relação dos números de série')
     st.dataframe(df_lista)
 
-    dowload(df_lista, 'lista_renovacoes.xlsx')
+    gerar_excel.dowload(df_lista, 'lista_renovacoes.xlsx')

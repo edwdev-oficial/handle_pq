@@ -99,3 +99,9 @@
     /* background-color: var(--COLOR_DARK); */
     min-height: 30rem;
 }
+
+.rodape-df {
+    text-align: right;
+    font-size: 0.9rem;
+    font-style: italic;
+}
